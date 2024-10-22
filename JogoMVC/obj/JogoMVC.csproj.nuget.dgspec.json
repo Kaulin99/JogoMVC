@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\EC5\\EC5 escola\\Linguagem de programação 1\\JogoMVC\\JogoMVC\\JogoMVC.csproj": {}
+    "C:\\Users\\082220027\\Documents\\teste\\JogoMVC\\JogoMVC.csproj": {}
   },
   "projects": {
-    "D:\\EC5\\EC5 escola\\Linguagem de programação 1\\JogoMVC\\JogoMVC\\JogoMVC.csproj": {
+    "C:\\Users\\082220027\\Documents\\teste\\JogoMVC\\JogoMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\EC5\\EC5 escola\\Linguagem de programação 1\\JogoMVC\\JogoMVC\\JogoMVC.csproj",
+        "projectUniqueName": "C:\\Users\\082220027\\Documents\\teste\\JogoMVC\\JogoMVC.csproj",
         "projectName": "JogoMVC",
-        "projectPath": "D:\\EC5\\EC5 escola\\Linguagem de programação 1\\JogoMVC\\JogoMVC\\JogoMVC.csproj",
+        "projectPath": "C:\\Users\\082220027\\Documents\\teste\\JogoMVC\\JogoMVC.csproj",
         "packagesPath": "C:\\Users\\082220027\\.nuget\\packages\\",
-        "outputPath": "D:\\EC5\\EC5 escola\\Linguagem de programação 1\\JogoMVC\\JogoMVC\\obj\\",
+        "outputPath": "C:\\Users\\082220027\\Documents\\teste\\JogoMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

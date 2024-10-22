@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n/O7uOQhH7L+hdtQyMET74uaionH57/CpX186fPE9b5PMKwH/LagSM6uUciOnWq8+6stFC9JiDZ1kSGQUHZl4Q==",
+  "dgSpecHash": "AKSe3gsWzIkJi5kCrm2ZmUSSTvkFOEQ+udwAnWuyawT4BcvRWgCGPAr1xGmIHlKwXXxEMWEFIXRVRJ9qzgbGVw==",
   "success": true,
-  "projectFilePath": "D:\\EC5\\EC5 escola\\Linguagem de programação 1\\JogoMVC\\JogoMVC\\JogoMVC.csproj",
+  "projectFilePath": "C:\\Users\\082220027\\Documents\\teste\\JogoMVC\\JogoMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\082220027\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\082220027\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kauea\\Source\\Repos\\JogoMVC\\JogoMVC\\JogoMVC.csproj": {}
+    "Z:\\EC5 escola\\Linguagem de programação 1\\JogoWeb\\JogoMVC\\JogoMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kauea\\Source\\Repos\\JogoMVC\\JogoMVC\\JogoMVC.csproj": {
+    "Z:\\EC5 escola\\Linguagem de programação 1\\JogoWeb\\JogoMVC\\JogoMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kauea\\Source\\Repos\\JogoMVC\\JogoMVC\\JogoMVC.csproj",
+        "projectUniqueName": "Z:\\EC5 escola\\Linguagem de programação 1\\JogoWeb\\JogoMVC\\JogoMVC.csproj",
         "projectName": "JogoMVC",
-        "projectPath": "C:\\Users\\kauea\\Source\\Repos\\JogoMVC\\JogoMVC\\JogoMVC.csproj",
-        "packagesPath": "C:\\Users\\kauea\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kauea\\Source\\Repos\\JogoMVC\\JogoMVC\\obj\\",
+        "projectPath": "Z:\\EC5 escola\\Linguagem de programação 1\\JogoWeb\\JogoMVC\\JogoMVC.csproj",
+        "packagesPath": "C:\\Users\\082220027\\.nuget\\packages\\",
+        "outputPath": "Z:\\EC5 escola\\Linguagem de programação 1\\JogoWeb\\JogoMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\kauea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\082220027\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -69,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

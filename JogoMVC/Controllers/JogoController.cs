@@ -1,7 +1,7 @@
 ﻿using JogoMVC.DAO;
 using JogoWeb.Models;
 using Microsoft.AspNetCore.Mvc;
-
+using JogoMVC.Models;
 
 namespace JogoMVC.Controllers
 {
@@ -9,23 +9,44 @@ namespace JogoMVC.Controllers
     {
         public IActionResult Index()
         {
-            JogoDAO dao = new JogoDAO();
-            List<JogoViewModel> lista = dao.Listagem();
-            return View("Index", lista);
+            try
+            {
+                JogoDAO dao = new JogoDAO();
+                var lista = dao.Listagem();
+                return View("Index", lista);
+            }
+            catch (Exception ex)
+            {
+                return View("Error", new ErrorViewModel(ex.ToString()));
+            }
         }
 
         public IActionResult Create()
         {
-            JogoViewModel jogo = new JogoViewModel();
-            jogo.data_aquisicao = DateTime.Now;
-            return View("Form", jogo);
+            try
+            {
+                JogoViewModel jogo = new JogoViewModel();
+                jogo.data_aquisicao = DateTime.Now;
+                return View("Form", jogo);
+            }
+            catch (Exception ex)
+            {
+                return View("Error", new ErrorViewModel(ex.ToString()));
+            }
         }
 
         public IActionResult Salvar(JogoViewModel jogo)
         {
-            JogoDAO dao = new JogoDAO();
-            dao.Inserir(jogo);
-            return RedirectToAction("Index");
+            try
+            {
+                JogoDAO dao = new JogoDAO();
+                dao.Inserir(jogo);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+                return View("Error", new ErrorViewModel(ex.ToString()));
+            }
         }
     }
 }

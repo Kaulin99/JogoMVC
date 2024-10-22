@@ -36,3 +36,41 @@ D:\EC5\EC5 escola\Linguagem de programação 1\JogoMVC\JogoMVC\obj\Debug\net7.0\
 D:\EC5\EC5 escola\Linguagem de programação 1\JogoMVC\JogoMVC\obj\Debug\net7.0\JogoMVC.pdb
 D:\EC5\EC5 escola\Linguagem de programação 1\JogoMVC\JogoMVC\obj\Debug\net7.0\JogoMVC.genruntimeconfig.cache
 D:\EC5\EC5 escola\Linguagem de programação 1\JogoMVC\JogoMVC\obj\Debug\net7.0\ref\JogoMVC.dll
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\JogoMVC.csproj.AssemblyReference.cache
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\JogoMVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\JogoMVC.AssemblyInfoInputs.cache
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\JogoMVC.AssemblyInfo.cs
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\JogoMVC.csproj.CoreCompileInputs.cache
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\JogoMVC.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\JogoMVC.RazorAssemblyInfo.cache
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\JogoMVC.RazorAssemblyInfo.cs
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\JogoMVC.dll
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\refint\JogoMVC.dll
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\JogoMVC.pdb
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\bin\Debug\net7.0\appsettings.json
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\bin\Debug\net7.0\JogoMVC.staticwebassets.runtime.json
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\bin\Debug\net7.0\JogoMVC.exe
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\bin\Debug\net7.0\JogoMVC.deps.json
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\bin\Debug\net7.0\JogoMVC.runtimeconfig.json
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\bin\Debug\net7.0\JogoMVC.dll
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\bin\Debug\net7.0\JogoMVC.pdb
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\bin\Debug\net7.0\System.Data.SqlClient.dll
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\bin\Debug\net7.0\runtimes\win-arm64\native\sni.dll
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\bin\Debug\net7.0\runtimes\win-x64\native\sni.dll
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\bin\Debug\net7.0\runtimes\win-x86\native\sni.dll
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\bin\Debug\net7.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\staticwebassets\msbuild.JogoMVC.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\staticwebassets\msbuild.build.JogoMVC.props
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.JogoMVC.props
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.JogoMVC.props
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\scopedcss\bundle\JogoMVC.styles.css
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\scopedcss\projectbundle\JogoMVC.bundle.scp.css
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\JogoMVC.csproj.CopyComplete
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\JogoMVC.genruntimeconfig.cache
+C:\Users\kauea\Source\Repos\JogoMVC\JogoMVC\obj\Debug\net7.0\ref\JogoMVC.dll

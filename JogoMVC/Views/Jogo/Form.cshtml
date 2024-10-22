@@ -1,0 +1,15 @@
+﻿@using JogoWeb.Models
+@model JogoViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cadastro de Jogo</h2>
+
+<form action="Salvar" method="post">
+    <label for="id" class="control-label">Código</label>
+    <input type="number" name="id" value="@Model.id" />
+
+    <input type="submit" value="Salvar dados" />
+    <br />
+</form>

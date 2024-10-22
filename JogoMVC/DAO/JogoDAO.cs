@@ -1,4 +1,5 @@
 ﻿using JogoWeb.Models;
+using Microsoft.AspNetCore.Http.Json;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -35,10 +36,13 @@ namespace JogoMVC.DAO
         {
             SqlParameter[] parametros = new SqlParameter[5];
             parametros[0] = new SqlParameter("id", jogo.id);
-            parametros[1] = new SqlParameter("nome", jogo.descricao);
-            parametros[2] = new SqlParameter("mensalidade", jogo.valor_locacao);
-            parametros[3] = new SqlParameter("cidadeId", jogo.categoriaID);
-            parametros[4] = new SqlParameter("dataNascimento", jogo.data_aquisicao);
+            parametros[1] = new SqlParameter("descricao", jogo.descricao);
+            if (jogo.valor_locacao == null)
+                parametros[2] = new SqlParameter("valor_locacao", DBNull.Value);
+            else
+                parametros[2] = new SqlParameter("valor_locacao", jogo.valor_locacao);
+            parametros[3] = new SqlParameter("categoriaID", jogo.categoriaID);
+            parametros[4] = new SqlParameter("data_aquisicao", jogo.data_aquisicao);
             return parametros;
 
         }
@@ -57,7 +61,8 @@ namespace JogoMVC.DAO
             a.descricao = registro["descricao"].ToString();
             a.categoriaID = Convert.ToInt32(registro["categoriaID"]);
             a.data_aquisicao = Convert.ToDateTime(registro["data_aquisicao"]);
-            a.valor_locacao = Convert.ToString(registro["valor_locacao"]);
+            if (registro["valor_locacao"] != DBNull.Value)
+                a.valor_locacao = Convert.ToDouble(registro["valor_locacao"]);
             return a;
         }
 

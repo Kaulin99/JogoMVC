@@ -20,11 +20,11 @@
     @foreach (var jogo in Model)
     {
         <tr>
-            <td></td>
+            <td><a href="/jogo/Edit?id=@jogo.id">Editar</a> </td>
             <td>@jogo.id</td>
             <td>@jogo.descricao</td>
             <td>@jogo.data_aquisicao.ToShortDateString()</td>
-            <td>@jogo.valor_locacao?.ToString("0,00")</td>
+            <td>@jogo.valor_locacao?.ToString("0.00")</td>
             <td>@jogo.categoriaID</td>
         </tr>
     }

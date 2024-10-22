@@ -40,7 +40,11 @@ namespace JogoMVC.Controllers
             try
             {
                 JogoDAO dao = new JogoDAO();
-                dao.Inserir(jogo);
+                if(dao.Consulta(jogo.id)==null)
+                    dao.Inserir(jogo);
+                else
+                    dao.Alterar(jogo);
+
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
@@ -48,5 +52,23 @@ namespace JogoMVC.Controllers
                 return View("Error", new ErrorViewModel(ex.ToString()));
             }
         }
+
+        public IActionResult Edit(int id)
+        {
+            try
+            {
+                JogoDAO dao = new JogoDAO();
+                JogoViewModel jogo = dao.Consulta(id);
+                if (jogo == null)
+                    return RedirectToAction("index");
+                else
+                    return View("Form", jogo);
+            }
+            catch (Exception ex)
+            {
+                return View("Error", new ErrorViewModel(ex.ToString()));
+            }
+        }
+
     }
 }

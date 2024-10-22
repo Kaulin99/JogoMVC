@@ -12,7 +12,7 @@ namespace JogoMVC.DAO
 
         {
             string sql =
-            "insert into alunos(id, descricao, valor_locacao, data_aquisicao, categoriaID)"
+            "insert into jogos(id, descricao, valor_locacao, data_aquisicao, categoriaID)"
            +
             "values ( @id, @descricao, @valor_locacao, @data_aquisicao, @categoriaID )"
            ;
@@ -49,7 +49,7 @@ namespace JogoMVC.DAO
         public void Excluir(int id)
 
         {
-            string sql = "delete alunos where id =" + id;
+            string sql = "delete jogos where id =" + id;
             HelperDAO.ExecutaSQL(sql, null);
         }
 

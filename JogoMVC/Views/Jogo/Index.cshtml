@@ -1,0 +1,29 @@
+﻿@using JogoWeb.Models
+@model List<JogoViewModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Listagem de Jogos</h2>
+
+<a href="/jogo/create">Novo Registro</a>
+
+<table class="table table-responsive">
+    <tr>
+        <th>Ações</th>
+        <th>Cógido</th>
+        <th>Nome do jogo</th>
+        <th>Data de aquisição</th>
+        <th>Valor do Jogo</th>
+    </tr>
+    @foreach (var jogo in Model)
+    {
+        <tr>
+            <td></td>
+            <td>@jogo.id</td>
+            <td>@jogo.descricao</td>
+            <td>@jogo.data_aquisicao.ToShortDateString()</td>
+            <td>@jogo.valor_locacao</td>
+        </tr>
+    }
+</table>

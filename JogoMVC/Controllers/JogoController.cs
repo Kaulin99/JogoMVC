@@ -27,6 +27,10 @@ namespace JogoMVC.Controllers
             {
                 JogoViewModel jogo = new JogoViewModel();
                 jogo.data_aquisicao = DateTime.Now;
+                
+                JogoDAO dao = new JogoDAO();
+                jogo.id = dao.ProximoId();
+
                 return View("Form", jogo);
             }
             catch (Exception ex)
@@ -40,7 +44,7 @@ namespace JogoMVC.Controllers
             try
             {
                 JogoDAO dao = new JogoDAO();
-                if(dao.Consulta(jogo.id)==null)
+                if (dao.Consulta(jogo.id) == null)
                     dao.Inserir(jogo);
                 else
                     dao.Alterar(jogo);
@@ -70,5 +74,19 @@ namespace JogoMVC.Controllers
             }
         }
 
+        public IActionResult Delete(int id)
+        {
+            try
+            {
+                JogoDAO dao = new JogoDAO();
+                dao.Excluir(id);
+                return RedirectToAction("index");
+
+            }
+            catch (Exception ex)
+            {
+                return View("Error", new ErrorViewModel(ex.ToString()));
+            }
+        }
     }
 }

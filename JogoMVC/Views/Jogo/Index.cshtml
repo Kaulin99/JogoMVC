@@ -20,7 +20,9 @@
     @foreach (var jogo in Model)
     {
         <tr>
-            <td><a href="/jogo/Edit?id=@jogo.id">Editar</a> </td>
+            <td><a href="/jogo/Edit?id=@jogo.id">Editar</a>
+                <a href="javascript:apagarJogo(@jogo.id)">Apagar</a>
+            </td>
             <td>@jogo.id</td>
             <td>@jogo.descricao</td>
             <td>@jogo.data_aquisicao.ToShortDateString()</td>
@@ -29,3 +31,11 @@
         </tr>
     }
 </table>
+
+<script>
+    function apagarJogo(id)
+    {
+        if (confirm('Confirma a exclusão do registro? '))
+            location.href = 'jogo/Delete?id=' + id;
+    }
+</script>

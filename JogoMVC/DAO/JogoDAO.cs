@@ -77,6 +77,7 @@ namespace JogoMVC.DAO
             else
                 return MontaAluno(tabela.Rows[0]);
         }
+        
         public List<JogoViewModel> Listagem()
         {
             List<JogoViewModel> lista = new List<JogoViewModel>();
@@ -86,6 +87,13 @@ namespace JogoMVC.DAO
             foreach (DataRow registro in tabela.Rows)
                 lista.Add(MontaAluno(registro));
             return lista;
+        }
+
+        public int ProximoId()
+        {
+            string sql = "select isnull(max(id) +1,1) as 'MAIOR' from jogos";
+            DataTable tabela = HelperDAO.ExecutaSelect(sql, null);
+            return Convert.ToInt32(tabela.Rows[0]["MAIOR"]);
         }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pe9agVtYn2ZKX3Xhg9opi48sbFgVERbB64XlRiqMQaBielyBiPiSFTAwgecl+ARLL9N+UY/V5PZFMNDWql9s9A==",
+  "dgSpecHash": "ieha/Z4ow04hhaeJu00QHMyk2Csy8ogsKcRX3ry9ZPc6szuaOGrqPzOgOJNB8+6ckSjqkVSt33r7Exhhn50bKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kauea\\Source\\Repos\\JogoMVC\\JogoMVC\\JogoMVC.csproj",
+  "projectFilePath": "C:\\Users\\kauea\\source\\repos\\JogoMVC\\JogoMVC\\JogoMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kauea\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\kauea\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -25,6 +25,8 @@ namespace JogoMVC.Controllers
         {
             try
             {
+                ViewBag.Operacao = "I";
+
                 JogoViewModel jogo = new JogoViewModel();
                 jogo.data_aquisicao = DateTime.Now;
                 
@@ -39,12 +41,12 @@ namespace JogoMVC.Controllers
             }
         }
 
-        public IActionResult Salvar(JogoViewModel jogo)
+        public IActionResult Salvar(JogoViewModel jogo, string Operacao)
         {
             try
             {
                 JogoDAO dao = new JogoDAO();
-                if (dao.Consulta(jogo.id) == null)
+                if (Operacao == "I")
                     dao.Inserir(jogo);
                 else
                     dao.Alterar(jogo);
@@ -60,7 +62,9 @@ namespace JogoMVC.Controllers
         public IActionResult Edit(int id)
         {
             try
-            {
+            {   
+                ViewBag.Operacao="A";
+
                 JogoDAO dao = new JogoDAO();
                 JogoViewModel jogo = dao.Consulta(id);
                 if (jogo == null)

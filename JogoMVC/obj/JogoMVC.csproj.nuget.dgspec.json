@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kauea\\Source\\Repos\\JogoMVC\\JogoMVC\\JogoMVC.csproj": {}
+    "C:\\Users\\kauea\\source\\repos\\JogoMVC\\JogoMVC\\JogoMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kauea\\Source\\Repos\\JogoMVC\\JogoMVC\\JogoMVC.csproj": {
+    "C:\\Users\\kauea\\source\\repos\\JogoMVC\\JogoMVC\\JogoMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kauea\\Source\\Repos\\JogoMVC\\JogoMVC\\JogoMVC.csproj",
+        "projectUniqueName": "C:\\Users\\kauea\\source\\repos\\JogoMVC\\JogoMVC\\JogoMVC.csproj",
         "projectName": "JogoMVC",
-        "projectPath": "C:\\Users\\kauea\\Source\\Repos\\JogoMVC\\JogoMVC\\JogoMVC.csproj",
+        "projectPath": "C:\\Users\\kauea\\source\\repos\\JogoMVC\\JogoMVC\\JogoMVC.csproj",
         "packagesPath": "C:\\Users\\kauea\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kauea\\Source\\Repos\\JogoMVC\\JogoMVC\\obj\\",
+        "outputPath": "C:\\Users\\kauea\\source\\repos\\JogoMVC\\JogoMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

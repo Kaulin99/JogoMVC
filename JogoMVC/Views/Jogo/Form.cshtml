@@ -6,37 +6,45 @@
 
 <h2>Cadastro de Jogo</h2>
 
-<form action="Salvar" method="post">
-    <input type="hidden" name="Operacao" value="@ViewBag.Operacao" />
+<div class="row">
+    <div class="col-md-4">
+        <form action="Salvar" method="post">
+            <input type="hidden" name="Operacao" value="@ViewBag.Operacao" />
 
-    <label for="id" class="control-label">Código</label>
-    @if(ViewBag.Operacao=="I")
-    {
-        <input type="number" name="id" value="@Model.id" class="form-control"/>
-    }
-    else
-    {
-        <input type="number" name="id" value="@Model.id" class="form-control disabled" readonly/>
-    }   
-    <span asp-validation-for="id" class="text-danger"></span>
-    <br />
+            <label for="id" class="control-label">Código</label>
+            @if(ViewBag.Operacao=="I")
+            {
+                <input type="number" name="id" value="@Model.id" class="form-control"/>
+            }
+            else
+            {
+                <input type="number" name="id" value="@Model.id" class="form-control disabled" readonly/>
+            }   
+            <span asp-validation-for="id" class="text-danger"></span>
+            <br />
 
-    <label for="descricao" class="control-label">Nome do jogo</label>
-    <input type="text" Name="descricao" value="@Model.descricao" class="form-control" />
-    <br />
+            <label for="descricao" class="control-label">Nome do jogo</label>
+            <input type="text" Name="descricao" value="@Model.descricao" class="form-control" />
+            <span asp-validation-for="descricao" class="text-danger"></span>
+            <br />
 
-    <label for="valor_locacao" class="control-label">Valor da locação</label>
-    <input type="number" Name="valor_locacao" value="@Model.valor_locacao" class="form-control" />
-    <br />
+            <label for="valor_locacao" class="control-label">Valor da locação</label>
+            <input type="number" Name="valor_locacao" value="@Model.valor_locacao" class="form-control" />
+            <span asp-validation-for="valor_locacao" class="text-danger"></span>
+            <br />
 
-    <label for="data_aquisicao" class="control-label">Data de aquisição</label>
-    <input type="date" Name="data_aquisicao" value="@Model.data_aquisicao.ToString("yyyy-MM-dd")" class="form-control" />
-    <br />
+            <label for="data_aquisicao" class="control-label">Data de aquisição</label>
+            <input type="date" Name="data_aquisicao" value="@Model.data_aquisicao.ToString("yyyy-MM-dd")" class="form-control" />
+            <span asp-validation-for="data_aquisicao" class="text-danger"></span>
+            <br />
 
-    <label for="categoriaID" class="control-label">Código da categoria</label>
-    <input type="number" Name="categoriaID" value="@Model.categoriaID" class="form-control" />
-    <br />
+            <label for="categoriaID" class="control-label">Código da categoria</label>
+            <input type="number" Name="categoriaID" value="@Model.categoriaID" class="form-control" />
+            <span asp-validation-for="categoriaID" class="text-danger"></span>
+            <br />
 
-    <input type="submit" value="Salvar dados" /> 
-    <br />
-</form>
+            <input type="submit" value="Salvar dados" /> 
+            <br />
+        </form>
+    </div>
+</div>

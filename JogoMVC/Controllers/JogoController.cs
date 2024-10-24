@@ -29,7 +29,7 @@ namespace JogoMVC.Controllers
 
                 JogoViewModel jogo = new JogoViewModel();
                 jogo.data_aquisicao = DateTime.Now;
-                
+
                 JogoDAO dao = new JogoDAO();
                 jogo.id = dao.ProximoId();
 
@@ -45,13 +45,23 @@ namespace JogoMVC.Controllers
         {
             try
             {
-                JogoDAO dao = new JogoDAO();
-                if (Operacao == "I")
-                    dao.Inserir(jogo);
+                ValidaDados(jogo, Operacao);
+                if (ModelState.IsValid == false)
+                {
+                    ViewBag.Operacao = Operacao;
+                    return View("Form", jogo);
+                }
                 else
-                    dao.Alterar(jogo);
+                {
+                    JogoDAO dao = new JogoDAO();
+                    if (Operacao == "I")
+                        dao.Inserir(jogo);
+                    else
+                        dao.Alterar(jogo);
 
-                return RedirectToAction("Index");
+                    return RedirectToAction("Index");
+
+                }
             }
             catch (Exception ex)
             {
@@ -62,8 +72,8 @@ namespace JogoMVC.Controllers
         public IActionResult Edit(int id)
         {
             try
-            {   
-                ViewBag.Operacao="A";
+            {
+                ViewBag.Operacao = "A";
 
                 JogoDAO dao = new JogoDAO();
                 JogoViewModel jogo = dao.Consulta(id);
@@ -91,6 +101,34 @@ namespace JogoMVC.Controllers
             {
                 return View("Error", new ErrorViewModel(ex.ToString()));
             }
+        }
+
+        private void ValidaDados(JogoViewModel jogo, string Operacao)
+        {
+            ModelState.Clear(); //Evita aparecer erros em inglês
+            JogoDAO dAO = new JogoDAO();
+
+            if (jogo.id <= 0)
+                ModelState.AddModelError("id", "ID inválido!");
+            else
+            {
+                if (Operacao == "I" && dAO.Consulta(jogo.id) != null)
+                    ModelState.AddModelError("id", "Código já está em uso.");
+                if (Operacao == "A" && dAO.Consulta(jogo.id) == null) ;
+                ModelState.AddModelError("id", "Código não existe!");
+            }
+
+            if (string.IsNullOrEmpty(jogo.descricao))
+                ModelState.AddModelError("descricao", "Preencha o nome do jogo.");
+
+            if (jogo.valor_locacao <= 0)
+                ModelState.AddModelError("valor_locacao", "Valor não aceito");
+
+            if (jogo.categoriaID <= 0)
+                ModelState.AddModelError("categoriaID", "Informe o código da categoria");
+
+            if (jogo.data_aquisicao > DateTime.Now)
+                ModelState.AddModelError("data_aquisicao", "Data ínvalida meu querido/a viajante do tempo");
         }
     }
 }

@@ -52,8 +52,8 @@ namespace JogoMVC.DAO
             a.descricao = registro["descricao"].ToString();
             a.categoriaID = Convert.ToInt32(registro["categoriaID"]);
             a.data_aquisicao = Convert.ToDateTime(registro["data_aquisicao"]);
-            //if (registro["valor_locacao"] != DBNull.Value)
-            a.valor_locacao = Convert.ToDouble(registro["valor_locacao"]);
+                if (registro["valor_locacao"] != DBNull.Value)
+                    a.valor_locacao = Convert.ToDouble(registro["valor_locacao"]);
             return a;
         }
 
@@ -76,7 +76,12 @@ namespace JogoMVC.DAO
         public List<JogoViewModel> Listagem()
         {
             List<JogoViewModel> lista = new List<JogoViewModel>();
-            DataTable tabela = HelperDAO.ExecutaProcSelect("spLista", null);
+            var p = new SqlParameter[]
+           {
+                new SqlParameter ("Tabela","jogos")
+           };
+
+            DataTable tabela = HelperDAO.ExecutaProcSelect("spLista", p);
 
             foreach (DataRow registro in tabela.Rows)
                 lista.Add(MontaAluno(registro));

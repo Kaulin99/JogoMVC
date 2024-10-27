@@ -111,3 +111,21 @@ begin
 	data_aquisicao = @data_aquisicao, categoriaID = @categoriaID where id = @id
 end
 go
+
+CREATE TABLE cidades( 
+ id int  NOT NULL primary key, 
+ nome varchar(30) NULL, 
+) 
+GO --Insira os seguintes registros: 
+insert into cidades (id,nome) values (1, 'São Bernardo') 
+insert into cidades (id,nome) values (2, 'Santo André') 
+insert into cidades (id,nome) values (3, 'Maua') 
+insert into cidades (id,nome) values (4, 'Diadema') 
+insert into cidades (id,nome) values (5, 'Ribeirão Pires') 
+GO 
+create procedure spListagemCidades 
+as 
+begin 
+  select * from cidades order by nome 
+end 
+GO 

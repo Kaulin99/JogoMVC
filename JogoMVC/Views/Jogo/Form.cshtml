@@ -39,7 +39,7 @@
             <br />
 
             <label for="categoriaID" class="control-label">Código da categoria</label>
-            <input type="number" Name="categoriaID" value="@Model.categoriaID" class="form-control" />
+            <select asp-for="categoriaID" asp-items="ViewBag.Categorias" class="form-control"></select>
             <span asp-validation-for="categoriaID" class="text-danger"></span>
             <br />  
 

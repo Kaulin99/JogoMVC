@@ -2,6 +2,7 @@
 using JogoWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using JogoMVC.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace JogoMVC.Controllers
 {
@@ -33,6 +34,8 @@ namespace JogoMVC.Controllers
                 JogoDAO dao = new JogoDAO();
                 jogo.id = dao.ProximoId();
 
+                PreparaListaCategoriasParaCombo();
+
                 return View("Form", jogo);
             }
             catch (Exception ex)
@@ -49,6 +52,7 @@ namespace JogoMVC.Controllers
                 if (ModelState.IsValid == false)
                 {
                     ViewBag.Operacao = Operacao;
+                    PreparaListaCategoriasParaCombo();
                     return View("Form", jogo);
                 }
                 else
@@ -77,6 +81,8 @@ namespace JogoMVC.Controllers
 
                 JogoDAO dao = new JogoDAO();
                 JogoViewModel jogo = dao.Consulta(id);
+                PreparaListaCategoriasParaCombo();
+
                 if (jogo == null)
                     return RedirectToAction("index");
                 else
@@ -114,8 +120,8 @@ namespace JogoMVC.Controllers
             {
                 if (Operacao == "I" && dAO.Consulta(jogo.id) != null)
                     ModelState.AddModelError("id", "Código já está em uso.");
-                if (Operacao == "A" && dAO.Consulta(jogo.id) == null) ;
-                ModelState.AddModelError("id", "Código não existe!");
+                if (Operacao == "A" && dAO.Consulta(jogo.id) == null) 
+                    ModelState.AddModelError("id", "Código não existe!");
             }
 
             if (string.IsNullOrEmpty(jogo.descricao))
@@ -129,6 +135,22 @@ namespace JogoMVC.Controllers
 
             if (jogo.data_aquisicao > DateTime.Now)
                 ModelState.AddModelError("data_aquisicao", "Data ínvalida meu querido/a viajante do tempo");
+        }
+
+        private void PreparaListaCategoriasParaCombo()
+        {
+            CategoriasDAO dao   = new CategoriasDAO();
+            var categorias = dao.ListaCategoria();
+            List<SelectListItem> listaCategorias = new List<SelectListItem>();
+
+            listaCategorias.Add(new SelectListItem("Selecione uma categoria...", "0"));
+
+            foreach(var categoria in categorias)
+            {
+                SelectListItem item = new SelectListItem(categoria.descricao,categoria.id.ToString());
+                listaCategorias.Add(item);
+            }
+            ViewBag.categorias = listaCategorias;
         }
     }
 }

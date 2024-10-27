@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http.Json;
 using System.Data;
 using System.Data.SqlClient;
+using System.Reflection.Emit;
 
 namespace JogoMVC.DAO
 {
@@ -38,7 +39,8 @@ namespace JogoMVC.DAO
         {
             var p = new SqlParameter[]
             {
-                new SqlParameter("id", id)
+                new SqlParameter("id", id),
+                new SqlParameter("tabela", "jogos")
             };
 
             HelperDAO.ExecutaProc("spDelete", p);
@@ -62,7 +64,8 @@ namespace JogoMVC.DAO
 
             var p = new SqlParameter[]
             {
-                new SqlParameter ("id", id)
+                new SqlParameter("id", id),
+                new SqlParameter ("Tabela","jogos")
             };
 
             DataTable tabela = HelperDAO.ExecutaProcSelect("spConsulta", p);

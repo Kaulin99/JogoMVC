@@ -112,22 +112,22 @@ namespace JogoMVC.Controllers
         private void ValidaDados(JogoViewModel jogo, string Operacao)
         {
             ModelState.Clear(); //Evita aparecer erros em inglês
-            JogoDAO dAO = new JogoDAO();
+            JogoDAO dao = new JogoDAO();
 
             if (jogo.id <= 0)
                 ModelState.AddModelError("id", "ID inválido!");
             else
             {
-                if (Operacao == "I" && dAO.Consulta(jogo.id) != null)
+                if (Operacao == "I" && dao.Consulta(jogo.id) != null)
                     ModelState.AddModelError("id", "Código já está em uso.");
-                if (Operacao == "A" && dAO.Consulta(jogo.id) == null) 
+                if (Operacao == "A" && dao.Consulta(jogo.id) == null) 
                     ModelState.AddModelError("id", "Código não existe!");
             }
 
             if (string.IsNullOrEmpty(jogo.descricao))
                 ModelState.AddModelError("descricao", "Preencha o nome do jogo.");
 
-            if (jogo.valor_locacao <= 0)
+            if (jogo.valor_locacao < 0)
                 ModelState.AddModelError("valor_locacao", "Valor não aceito");
 
             if (jogo.categoriaID <= 0)

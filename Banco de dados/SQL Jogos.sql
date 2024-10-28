@@ -24,7 +24,7 @@ CREATE TABLE jogos(
  ---Cadastros de categoria
  insert into categorias (id,nome) values (1,'Plataforma')
  go
- insert into categorias (id,nome) values (2,'Ação')
+ insert into categorias (id,nome) values (2,'A��o')
   go
 insert into categorias (id,nome) values (3,'Puzzle')
 go
@@ -60,14 +60,13 @@ begin
 end
 go
 
-create or alter procedure spLista(
+create or alter procedure [dbo].[spLista]
 	@tabela varchar(max)
-)
 as
 begin
-	declare @sql varchar(max)
-	set @sql = 'select * from ' + @tabela
-	exec(@sql)
+	select Jogos.*, Categorias.descricao as Categoria
+	from jogos
+	left join Categorias on jogos.categoriaID = Categorias.id
 end
 go
 
@@ -111,21 +110,3 @@ begin
 	data_aquisicao = @data_aquisicao, categoriaID = @categoriaID where id = @id
 end
 go
-
-CREATE TABLE cidades( 
- id int  NOT NULL primary key, 
- nome varchar(30) NULL, 
-) 
-GO --Insira os seguintes registros: 
-insert into cidades (id,nome) values (1, 'São Bernardo') 
-insert into cidades (id,nome) values (2, 'Santo André') 
-insert into cidades (id,nome) values (3, 'Maua') 
-insert into cidades (id,nome) values (4, 'Diadema') 
-insert into cidades (id,nome) values (5, 'Ribeirão Pires') 
-GO 
-create procedure spListagemCidades 
-as 
-begin 
-  select * from cidades order by nome 
-end 
-GO 

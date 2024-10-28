@@ -1,8 +1,7 @@
-﻿using JogoWeb.Models;
-using Microsoft.AspNetCore.Http.Json;
+﻿using JogoMVC.Models;
+using JogoWeb.Models;
 using System.Data;
 using System.Data.SqlClient;
-using System.Reflection.Emit;
 
 namespace JogoMVC.DAO
 {
@@ -46,7 +45,7 @@ namespace JogoMVC.DAO
             HelperDAO.ExecutaProc("spDelete", p);
         }
 
-        private JogoViewModel MontaAluno(DataRow registro)
+        private JogoViewModel MontaJogo(DataRow registro)
 
         {
             JogoViewModel a = new JogoViewModel();
@@ -54,8 +53,16 @@ namespace JogoMVC.DAO
             a.descricao = registro["descricao"].ToString();
             a.categoriaID = Convert.ToInt32(registro["categoriaID"]);
             a.data_aquisicao = Convert.ToDateTime(registro["data_aquisicao"]);
-                if (registro["valor_locacao"] != DBNull.Value)
-                    a.valor_locacao = Convert.ToDouble(registro["valor_locacao"]);
+            if (registro["valor_locacao"] != DBNull.Value)
+                 a.valor_locacao = Convert.ToDouble(registro["valor_locacao"]);
+
+            CategoriasDAO dao = new CategoriasDAO();
+            CategoriasViewModel categoria = dao.Consulta(a.categoriaID);
+            if(categoria != null)
+                a.NomeCategoria = categoria.descricao;
+            else
+                a.NomeCategoria= null;
+
             return a;
         }
 
@@ -73,21 +80,23 @@ namespace JogoMVC.DAO
             if (tabela.Rows.Count == 0)
                 return null;
             else
-                return MontaAluno(tabela.Rows[0]);
+                return MontaJogo(tabela.Rows[0]);
         }
         
         public List<JogoViewModel> Listagem()
         {
             List<JogoViewModel> lista = new List<JogoViewModel>();
+            JogoViewModel j = new JogoViewModel();
+
             var p = new SqlParameter[]
            {
-                new SqlParameter ("Tabela","jogos")
+                new SqlParameter ("Tabela","jogos"),
            };
 
             DataTable tabela = HelperDAO.ExecutaProcSelect("spLista", p);
 
             foreach (DataRow registro in tabela.Rows)
-                lista.Add(MontaAluno(registro));
+                lista.Add(MontaJogo(registro));
             return lista;
         }
 

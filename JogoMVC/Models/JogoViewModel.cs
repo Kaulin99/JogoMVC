@@ -9,5 +9,10 @@
         public double? valor_locacao { get; set; }
         public DateTime data_aquisicao { get; set; }
         public int categoriaID { get; set; }
+
+        /// <summary> 
+        /// Campo para registar o nome da cidade após o join. Não é salvo na tabela Aluno 
+        /// </summary> 
+        public string? NomeCategoria { get; set; }
     }
 }
